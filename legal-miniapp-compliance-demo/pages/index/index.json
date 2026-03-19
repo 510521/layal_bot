@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "disclaimer": "/components/disclaimer/disclaimer"
+  },
+  "navigationBarTitleText": "⚖️ 民法典助手（演示版）"
+}

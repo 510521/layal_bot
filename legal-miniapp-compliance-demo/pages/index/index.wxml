@@ -1,0 +1,90 @@
+<view class="container">
+  <!-- 🔒 顶部强合规声明 -->
+  <view class="compliance-banner">
+    <text class="banner-icon">⚠️</text>
+    <text class="banner-text">本工具由AI生成，内容基于《民法典》公开文本，</text>
+    <text class="banner-highlight">仅供参考，不构成法律意见</text>
+    <text class="banner-text">。重大事项请咨询律师或拨打12348</text>
+  </view>
+
+  <!-- 💬 问题输入区 -->
+  <view class="input-section">
+    <view class="input-wrapper">
+      <textarea 
+        class="question-input" 
+        placeholder="请输入法律问题（示例：离婚财产怎么分？）" 
+        maxlength="{{maxInputLength}}"
+        bindinput="onInput"
+        value="{{question}}"
+        auto-height
+      />
+      <view class="input-footer">
+        <text class="char-count {{inputLength > maxInputLength * 0.8 ? 'near-limit' : ''}}">
+          {{inputLength}}/{{maxInputLength}}
+        </text>
+        <button class="clear-btn" wx:if="{{question}}" bindtap="clearInput">✕</button>
+      </view>
+    </view>
+    
+    <button 
+      class="submit-btn {{isProcessing ? 'btn-disabled' : ''}}" 
+      bindtap="handleSubmit"
+      disabled="{{isProcessing || inputLength < 4}}"
+    >
+      <text wx:if="{{!isProcessing}}">🔍 生成专业回答</text>
+      <text wx:else>⏳ 安全校验中...</text>
+    </button>
+    
+    <view class="hint-text">
+      <text>🔒 三重防护：敏感词过滤｜问题边界检测｜强制免责声明</text>
+    </view>
+  </view>
+
+  <!-- 📜 回答展示区 -->
+  <view wx:if="{{answer}}" class="answer-section">
+    <view class="answer-header">
+      <text class="header-title">📝 AI专业回答</text>
+      <view class="compliance-tag">✅ 已通过安全校验</view>
+    </view>
+    
+    <view class="answer-content">
+      <text>{{answer}}</text>
+      
+      <!-- 检索法条依据 -->
+      <view class="source-section" bindtap="toggleSource">
+        <view class="source-header">
+          <text class="source-title">📚 检索到的法条依据（{{showSource ? '▴' : '▾'}}）</text>
+        </view>
+        <view wx:if="{{showSource}}" class="source-list">
+          <block wx:for="{{sources}}" wx:key="index">
+            <view class="source-item">
+              <text class="source-title">【{{item.title}}】</text>
+              <text class="source-content">{{item.content}}</text>
+            </view>
+          </block>
+          <view wx:if="{{sources.length === 0}}" class="no-source">
+            <text>💡 为提供精准解答，请补充具体场景（如：离婚财产分割、租房押金等）</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 底部强提示 -->
+    <view class="footer-warning">
+      <text class="warning-icon">❗</text>
+      <text class="warning-text">本回答由AI生成，</text>
+      <text class="warning-highlight">不具有法律效力</text>
+      <text class="warning-text">。紧急情况请立即拨打110或12348</text>
+    </view>
+  </view>
+
+  <!-- ❌ 错误提示区 -->
+  <view wx:if="{{errorMessage}}" class="error-section">
+    <view class="error-icon">⚠️</view>
+    <view class="error-content">{{errorMessage}}</view>
+    <view class="error-suggestion">💡 建议：咨询执业律师或拨打12348法律援助热线</view>
+  </view>
+
+  <!-- 📌 免责声明组件（强制复用） -->
+  <disclaimer />
+</view>

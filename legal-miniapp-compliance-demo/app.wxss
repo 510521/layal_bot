@@ -1,0 +1,77 @@
+/* 全局样式 */
+page {
+  background-color: #f8f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC';
+}
+
+/* 合规Banner专属样式 */
+.compliance-banner {
+  background: linear-gradient(135deg, #fff8e6 0%, #fff3cd 100%);
+  border-left: 4px solid #ffc107;
+  padding: 16rpx 24rpx;
+  margin: 20rpx;
+  border-radius: 8rpx;
+  font-size: 26rpx;
+  line-height: 1.6;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+}
+
+.banner-icon {
+  font-size: 32rpx;
+  margin-right: 8rpx;
+}
+
+.banner-highlight {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+/* 通用元素 */
+.container {
+  padding-bottom: 40rpx;
+}
+
+.hint-text {
+  text-align: center;
+  color: #6c757d;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+}
+
+.error-section {
+  background: #fff8f8;
+  border: 2rpx solid #f5c6cb;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  margin: 30rpx;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5rpx); }
+  75% { transform: translateX(5rpx); }
+}
+
+.error-icon {
+  font-size: 60rpx;
+  color: #dc3545;
+  display: block;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.error-content {
+  color: #721c24;
+  line-height: 1.7;
+  font-size: 28rpx;
+  white-space: pre-line;
+}
+
+.error-suggestion {
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx dashed #e9ecef;
+  color: #495057;
+  font-size: 26rpx;
+}

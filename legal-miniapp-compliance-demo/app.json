@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1a3a6c",
+    "navigationBarTitleText": "⚖️ 民法典助手（演示版）",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#f8f9fa"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于法律咨询场景定位（本演示版未启用）"
+    }
+  },
+  "resizable": false,
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug": false
+}

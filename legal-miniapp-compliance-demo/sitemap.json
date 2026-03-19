@@ -1,0 +1,7 @@
+{
+  "desc": "关于本文件：https://developers.weixin.qq.com/miniprogram/dev/framework/sitemap.html",
+  "rules": [{
+    "action": "disallow",
+    "page": "*"
+  }]
+}

@@ -1,0 +1,33 @@
+<view class="disclaimer-container">
+  <view class="disclaimer-header">
+    <text class="header-icon">⚖️</text>
+    <text class="header-title">法律免责声明（必读）</text>
+  </view>
+  
+  <view class="disclaimer-list">
+    <view class="disclaimer-item">
+      <text class="item-icon">✓</text>
+      <text>本工具内容基于《中华人民共和国民法典》公开文本生成</text>
+    </view>
+    <view class="disclaimer-item">
+      <text class="item-icon">✓</text>
+      <text>所有回答</text><text class="highlight">仅供参考，不构成法律意见</text>
+    </view>
+    <view class="disclaimer-item">
+      <text class="item-icon">✓</text>
+      <text>重大事项请咨询执业律师（12348热线可查询）</text>
+    </view>
+    <view class="disclaimer-item">
+      <text class="item-icon">✓</text>
+      <text>紧急情况请立即拨打110或联系主管部门</text>
+    </view>
+    <view class="disclaimer-item">
+      <text class="item-icon">✓</text>
+      <text>数据来源：中华人民共和国司法部官网（2020年）</text>
+    </view>
+  </view>
+  
+  <view class="compliance-note">
+    <text>📌 依据《网络信息内容生态治理规定》《互联网信息服务管理办法》设计</text>
+  </view>
+</view>

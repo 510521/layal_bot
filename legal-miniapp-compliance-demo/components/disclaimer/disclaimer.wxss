@@ -1,0 +1,68 @@
+.disclaimer-container {
+  background: white;
+  border-radius: 20rpx;
+  margin: 30rpx;
+  padding: 36rpx;
+  box-shadow: 0 6rpx 24rpx rgba(0,0,0,0.08);
+  border: 2rpx solid #e9ecef;
+}
+
+.disclaimer-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #f1f3f5;
+}
+
+.header-icon {
+  font-size: 40rpx;
+  margin-right: 16rpx;
+}
+
+.header-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #1a3a6c;
+}
+
+.disclaimer-list {
+  padding: 0 10rpx;
+}
+
+.disclaimer-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f8f9fa;
+  line-height: 1.6;
+  font-size: 26rpx;
+  color: #495057;
+}
+
+.disclaimer-item:last-child {
+  border-bottom: none;
+}
+
+.item-icon {
+  font-size: 32rpx;
+  color: #28a745;
+  margin-right: 16rpx;
+  margin-top: 4rpx;
+}
+
+.highlight {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.compliance-note {
+  background: #fff8e6;
+  border-left: 4rpx solid #ffc107;
+  padding: 20rpx;
+  margin-top: 24rpx;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  color: #856404;
+  font-weight: 500;
+}
